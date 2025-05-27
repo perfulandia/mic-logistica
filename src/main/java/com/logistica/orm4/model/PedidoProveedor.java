@@ -30,7 +30,7 @@ public class PedidoProveedor {
     private int idPedido;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_proveedor",referencedColumnName = "idProveedor")
+    @JoinColumn(name = "id_proveedor",referencedColumnName = "idProveedor",nullable = false)
     private Proveedor proveedor;
 
     @ElementCollection
