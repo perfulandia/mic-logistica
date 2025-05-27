@@ -12,6 +12,6 @@ public interface PedidoProveedorRepository extends JpaRepository<PedidoProveedor
     @SuppressWarnings({ "unchecked", "null" })
     PedidoProveedor save(PedidoProveedor sesion);
     
-    Boolean existsByToken(int idPedido);
+    Boolean existsByidPedido(int idPedido);
     
 }

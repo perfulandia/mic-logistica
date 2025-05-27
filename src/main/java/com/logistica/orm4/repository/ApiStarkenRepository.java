@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.logistica.orm4.model.ApiStarken;
 
-public interface ApiStarkenRepository extends JpaRepository<ApiStarken, String>{
+public interface ApiStarkenRepository extends JpaRepository<ApiStarken, Integer>{
     
     @SuppressWarnings("null")
     List<ApiStarken> findAll();
@@ -12,6 +12,6 @@ public interface ApiStarkenRepository extends JpaRepository<ApiStarken, String>{
     @SuppressWarnings({ "unchecked", "null" })
     ApiStarken save(ApiStarken ApiStarken);
     
-    Boolean existsByToken(String apiKey);
+    Boolean existsByApiKey(String apiKey);
     
 }

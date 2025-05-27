@@ -30,7 +30,7 @@ public class PedidoProveedorController {
     @PostMapping
     public ResponseEntity<PedidoProveedor> crearPedidos(@RequestBody PedidoProveedor pedidos) {
 
-        if (pedidos != null && !pedidoProveedorService.existsById(pedidos.getIdPedido())) {
+        if (pedidos != null && !pedidoProveedorService.existsByidPedido(pedidos.getIdPedido())) {
 
             return new ResponseEntity<>(pedidoProveedorService.save(pedidos), HttpStatus.OK);
         }

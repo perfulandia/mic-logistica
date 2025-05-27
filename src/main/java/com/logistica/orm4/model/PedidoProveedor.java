@@ -1,6 +1,12 @@
 package com.logistica.orm4.model;
 
+import java.util.List;
+
+
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,6 +33,11 @@ public class PedidoProveedor {
     @JoinColumn(name = "id_proveedor",referencedColumnName = "idProveedor")
     private Proveedor proveedor;
 
-    //private List<Producto> detalle; //pendiente importar desde el otro microservicio
+    @ElementCollection
+    @CollectionTable(name = "producto_cantidad", joinColumns = @JoinColumn(name = "id"))
+    @Column(nullable = false)
+    private List<ProductoCantidad> productos;
+
+    
 }
 

@@ -30,7 +30,7 @@ public class ApiStarkenController {
     @PostMapping
     public ResponseEntity<ApiStarken> crearEnvios(@RequestBody ApiStarken apis) {
 
-        if (apis != null && !apiStarkenService.existsByToken(apis.getApiKey())) {
+        if (apis != null && !apiStarkenService.existsByApiKey(apis.getApiKey())) {
 
             return new ResponseEntity<>(apiStarkenService.save(apis), HttpStatus.OK);
         }

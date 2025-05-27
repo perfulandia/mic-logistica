@@ -30,7 +30,7 @@ public class EnvioStarkenController {
     @PostMapping
     public ResponseEntity<EnvioStarken> crearEnvios(@RequestBody EnvioStarken envios) {
 
-        if (envios != null && !envioStarkenService.existsByToken(envios.getNumeroTracking())) {
+        if (envios != null && !envioStarkenService.existsBynumeroTracking(envios.getNumeroTracking())) {
 
             return new ResponseEntity<>(envioStarkenService.save(envios), HttpStatus.OK);
         }

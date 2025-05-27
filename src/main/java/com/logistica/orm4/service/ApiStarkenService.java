@@ -23,7 +23,7 @@ public class ApiStarkenService {
         return apiStarkenRepository.save(sesion);
     }
 
-    public Boolean existsByToken(String apiKey){
-        return apiStarkenRepository.existsById(apiKey);
+    public Boolean existsByApiKey(String apiKey){
+        return apiStarkenRepository.existsByApiKey(apiKey);
     }
 }

@@ -12,6 +12,6 @@ public interface EnvioStarkenRepository extends JpaRepository<EnvioStarken, Inte
     @SuppressWarnings({ "unchecked", "null" })
     EnvioStarken save(EnvioStarken EnvioStarken);
     
-    Boolean existsByToken(int numeroTracking);
+    Boolean existsBynumeroTracking(int numeroTracking);
     
 }

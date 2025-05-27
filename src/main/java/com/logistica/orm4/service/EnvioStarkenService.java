@@ -23,7 +23,7 @@ public class EnvioStarkenService {
         return envioStarkenRepository.save(sesion);
     }
 
-    public Boolean existsByToken(int numero_tracking){
-        return envioStarkenRepository.existsById(numero_tracking);
+    public Boolean existsBynumeroTracking(int numero_tracking){
+        return envioStarkenRepository.existsBynumeroTracking(numero_tracking);
     }
 }
