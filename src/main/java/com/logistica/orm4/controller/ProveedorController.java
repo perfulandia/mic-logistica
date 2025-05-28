@@ -34,7 +34,7 @@ public class ProveedorController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Proveedor> getReportesById(@PathVariable int id) {
+    public ResponseEntity<Proveedor> getProveedorById(@PathVariable int id) {
         if (proveedorService.existsById(id)){
             return new ResponseEntity<>(proveedorService.findById(id).get(),HttpStatus.OK);
         }
