@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.logistica.orm4.model.PedidoProveedor;
 
-public interface PedidoProveedorRepository extends JpaRepository<PedidoProveedor, String>{
+public interface PedidoProveedorRepository extends JpaRepository<PedidoProveedor, Integer>{
     
     @SuppressWarnings("null")
     List<PedidoProveedor> findAll();
